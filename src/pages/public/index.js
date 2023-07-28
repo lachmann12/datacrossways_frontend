@@ -25,7 +25,7 @@ export const PublicPage = () => {
       <Jumbotron />
       <AvailableData />
       <DataCollections />
-      <NewsSection />
+      {/*<NewsSection /> */}
       <ContactInformation />
       <ContactUs />
       <StayConnected />
