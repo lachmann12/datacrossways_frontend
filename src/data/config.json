@@ -116,15 +116,14 @@
       {
         "service": "Google",
         "icon_service": "/image/google-icon.svg",
-        "url": "https://lymecloud.org/api/user/login/google"
+        "url": "https://BASE_URL/api/user/login/google"
       },
       {
         "service": "ORCID",
         "icon_service": "/image/orcid-icon.svg",
-        "url": "https://lymecloud.org/api/user/login/orcid"
+        "url": "https://BASE_URL/api/user/login/orcid"
       }
     ],
-
     "twitter": {
       "username": "lymemind"
     }
