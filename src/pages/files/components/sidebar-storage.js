@@ -27,7 +27,7 @@ export default function CustomProgressBar() {
   } = useQuery(["userStorage"], () => getUserStorage());
 
   const normalise = () =>
-    ((storage.file_quota_used - 0) * 100) / (storage.file_quota_available - 0);
+    ((storage.file_quota_used - 0) * 100) / (storage.file_quota - 0);
 
   if (isLoading) return "Loading...";
   if (error) return "There was a problem loading this page";
@@ -52,7 +52,7 @@ export default function CustomProgressBar() {
         <Grid item>
           <Typography sx={{ fontSize: "14px", fontWeight: "400" }}>
             {getReadableFileSizeString(storage.file_quota_used, "MB")} /{" "}
-            {getReadableFileSizeString(storage.file_quota_available, "MB")}
+            {getReadableFileSizeString(storage.file_quota, "MB")}
           </Typography>{" "}
         </Grid>
       </Grid>
