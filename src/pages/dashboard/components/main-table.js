@@ -32,9 +32,9 @@ const useData = ({ page, pageSize, filterState, collectionId }) => {
   return useQuery(
     queryKey,
     () => {
-      if (isUserFiles) {
-        return getUserFiles({ offset, limit: pageSize });
-      }
+      //if (isUserFiles) {
+      //  return getUserFiles({ offset, limit: pageSize });
+      //}
       return searchFiles({
         collectionId,
         filters: filterState,
