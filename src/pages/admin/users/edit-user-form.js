@@ -143,6 +143,23 @@ export const EditUserForm = ({
       </Grid>
       <Grid container justifyContent="space-between" margin="24px 0">
         <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
+          ORCID iD:{" "}
+        </Typography>
+        {isEdit ? (
+          <OutlinedInput
+            name="orcid_id"
+            defaultValue={user.orcid_id ? user.orcid_id : ""}
+            sx={{ width: "204px", height: "40px", maxWidth: "60%" }}
+          />
+        ) : (
+          <Typography sx={{ overflowWrap: "break-word" }}>
+            {" "}
+            {user.orcid_id ? user.orcid_id : ""}
+          </Typography>
+        )}
+      </Grid>
+      <Grid container justifyContent="space-between" margin="24px 0">
+        <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
           Creation Date:{" "}
         </Typography>
         <Typography sx={{ overflowWrap: "break-word" }}>

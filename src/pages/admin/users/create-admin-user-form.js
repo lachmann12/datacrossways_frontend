@@ -189,6 +189,26 @@ export const CreateAdminUserForm = ({
           </Grid>
           <Grid
             container
+            justifyContent="space-between"
+            alignItems="center"
+            margin="24px 0"
+          >
+            <DialogContentText
+              id="alert-dialog-description"
+              variant="modalTitle"
+              sx={{ color: "#0F7F90" }}
+            >
+              ORCID iD
+            </DialogContentText>
+            <TextField
+              margin="dense"
+              id="orcid_id"
+              name="orcid_id"
+              type="text"
+            />
+          </Grid>
+          <Grid
+            container
             sx={{
               justifyContent: "space-between",
               margin: "24px 0",
