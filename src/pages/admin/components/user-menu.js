@@ -43,9 +43,9 @@ const style = {
 
 
 export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
-
+  const navigate = useNavigate();
   function handleLogout(event) {
-    const navigate = useNavigate(); 
+    
     const currentProtocol = window.location.protocol; 
     const currentHostname = window.location.hostname;
     const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
