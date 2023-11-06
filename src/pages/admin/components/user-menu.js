@@ -25,6 +25,8 @@ import { EditModal } from "../../../common/edit-modal";
 import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
+import { useHistory } from "react-router-dom";
+
 
 const style = {
   position: "absolute",
@@ -40,14 +42,16 @@ const style = {
 };
 
 function handleLogout() {
-  const currentProtocol = window.location.protocol; // Get the current page's protocol (http: or https:)
-  const currentHostname = window.location.hostname; // Get the current page's hostname (e.g., lymecloud.org)
-
-  // Construct the API URL using the current protocol and hostname
+  const history = useHistory(); // Add this line
+  const currentProtocol = window.location.protocol; 
+  const currentHostname = window.location.hostname;
   const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
-
   fetch(apiUrl, {
     method: 'GET'
+  }).then(response => {
+    if(response.ok) {
+      history.push('/');
+    }
   })
 }
 
