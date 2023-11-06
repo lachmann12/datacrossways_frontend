@@ -25,7 +25,7 @@ import { EditModal } from "../../../common/edit-modal";
 import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const style = {
@@ -42,7 +42,7 @@ const style = {
 };
 
 function handleLogout() {
-  const history = useHistory(); // Add this line
+  const navigate = useNavigate(); 
   const currentProtocol = window.location.protocol; 
   const currentHostname = window.location.hostname;
   const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
@@ -50,7 +50,7 @@ function handleLogout() {
     method: 'GET'
   }).then(response => {
     if(response.ok) {
-      history.push('/');
+      navigate('/');
     }
   })
 }
