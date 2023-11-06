@@ -39,6 +39,12 @@ const style = {
   boxShadow: "0px 0px 6px rgba(0, 43, 52, 0.25)",
 };
 
+function handleLogout() {
+  fetch('/api/user/logout', {
+    method: 'GET'
+  })
+}
+
 export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
   const {
     data: user,
@@ -206,7 +212,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 alignItems: "center",
               }}
             >
-              <Link className="exitLink"  to="/api/user/logout">
+              <Link className="exitLink" to="#" onClick={handleLogout}>
                 <Grid container>
                   <Grid item sx={{ marginRight: "8px" }}>
                     <img src={exitIcon} alt="Exit icon" />
