@@ -207,7 +207,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 alignItems: "center",
               }}
             >
-              <Link className="exitLink">
+              <Link className="exitLink" to="/api/user/logout">
                 <Grid container>
                   <Grid item sx={{ marginRight: "8px" }}>
                     <img src={exitIcon} alt="Exit icon" />
