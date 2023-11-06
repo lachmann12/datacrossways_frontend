@@ -40,7 +40,13 @@ const style = {
 };
 
 function handleLogout() {
-  fetch('/api/user/logout', {
+  const currentProtocol = window.location.protocol; // Get the current page's protocol (http: or https:)
+  const currentHostname = window.location.hostname; // Get the current page's hostname (e.g., lymecloud.org)
+
+  // Construct the API URL using the current protocol and hostname
+  const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
+
+  fetch(apiUrl, {
     method: 'GET'
   })
 }
