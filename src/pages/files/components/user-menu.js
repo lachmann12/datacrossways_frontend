@@ -40,21 +40,6 @@ const style = {
   boxShadow: "0px 0px 6px rgba(0, 43, 52, 0.25)",
 };
 
-
-function handleLogout() {
-  const navigate = useNavigate(); 
-  const currentProtocol = window.location.protocol; 
-  const currentHostname = window.location.hostname;
-  const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
-  fetch(apiUrl, {
-    method: 'GET'
-  }).then(response => {
-    if(response.ok) {
-      navigate('/');
-    }
-  })
-}
-
 export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
 
   function handleLogout(event) {
@@ -70,7 +55,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
       }
     })
   }
-  
+
   const {
     data: user,
     isLoading,
