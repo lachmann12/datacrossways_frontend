@@ -183,9 +183,10 @@ export const Admin = () => {
               </>
             )}
           </Main>
+          <FooterSection />
         </Box>
       </FilterContextProvider>
-      <FooterSection />
+      
     </>
   );
 };
