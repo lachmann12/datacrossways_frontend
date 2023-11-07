@@ -227,7 +227,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                   <Grid item sx={{ marginRight: "8px" }}>
                     <img src={exitIcon} alt="Exit icon" />
                   </Grid>
-                  <Grid item>Logout 2</Grid>
+                  <Grid item>Logout</Grid>
                 </Grid>
               </Link>
             </Box>
