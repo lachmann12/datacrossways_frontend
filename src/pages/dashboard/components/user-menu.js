@@ -25,6 +25,7 @@ import { EditModal } from "../../../common/edit-modal";
 import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
+import { deepOrange } from '@mui/material/colors';
 
 const style = {
   position: "absolute",
@@ -165,7 +166,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
         </Link>
       )}
       <Button onClick={handleOpen}>
-        <Avatar>
+        <Avatar sx={{ bgcolor: deepOrange[500] }}>
         {user.first_name} {user.last_name}
         </Avatar>
       </Button>
@@ -186,14 +187,14 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
             }}
           >
             <Box sx={{ flexShrink: 1 }}>
-            <Avatar>
-              {user.first_name} {user.last_name}
+            <Avatar sx={{ bgcolor: deepOrange[500] }}>
+            {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
             </Avatar>
             </Box>
             <Box sx={{ flexShrink: 0 }}>
               {" "}
               <Typography variant="modalTitle">
-                {user.first_name} {user.last_name}
+              {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
               </Typography>
               <Typography variant="modalSubtitle">{user.email}</Typography>
             </Box>
