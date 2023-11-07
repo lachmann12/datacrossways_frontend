@@ -71,6 +71,8 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
   const { pathname } = location;
   const splitLocation = pathname.split("/");
 
+  const firstLetter = user.first_name ? user.first_name.charAt(0).toUpperCase() : '';
+
   if (isLoading) return "Loading...";
   if (error) return "There was a problem loading this page";
   const roles = user.roles.map((entry) => entry.name);
@@ -166,10 +168,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
         </Link>
       )}
       <Button onClick={handleOpen}>
-        <Avatar
-          alt="avatar"
-          src="https://images.unsplash.com/photo-1614586125858-e695dd97d1b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1503&q=80"
-        />
+        <Avatar>{firstLetter}</Avatar>
       </Button>
       <Modal
         open={open}
