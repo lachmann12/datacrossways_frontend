@@ -60,21 +60,6 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
     }
   };
   
-
-  function handleLogout(event) {
-    
-    const currentProtocol = window.location.protocol; 
-    const currentHostname = window.location.hostname;
-    const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
-    fetch(apiUrl, {
-      method: 'GET'
-    }).then(response => {
-      if(response.ok) {
-        navigate('/');
-      }
-    })
-  }
-
   const {
     data: user,
     isLoading,
