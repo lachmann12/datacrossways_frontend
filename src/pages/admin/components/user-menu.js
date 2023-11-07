@@ -169,7 +169,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
       )}
       <Button onClick={handleOpen}>
       <Avatar sx={{ bgcolor: deepOrange[500] }}>
-              {user.first_name} {user.last_name}
+        {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
       </Avatar>
       </Button>
       <Modal
@@ -190,13 +190,13 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
           >
             <Box sx={{ flexShrink: 1 }}>
             <Avatar sx={{ bgcolor: deepOrange[500] }}>
-            {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
+              {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
             </Avatar>
             </Box>
             <Box sx={{ flexShrink: 0 }}>
               {" "}
               <Typography variant="modalTitle">
-              {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
+                {user.first_name} {user.last_name}
               </Typography>
               <Typography variant="modalSubtitle">{user.email}</Typography>
             </Box>
