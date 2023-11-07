@@ -221,14 +221,12 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 alignItems: "center",
               }}
             >
-              <Link className="exitLink" to="#" onClick={handleLogout}>
+              <Link className="exitLink" onClick={handleLogout}>
                 <Grid container>
                   <Grid item sx={{ marginRight: "8px" }}>
                     <img src={exitIcon} alt="Exit icon" />
                   </Grid>
-                  <Grid item><a href="/api/user/logout" className="userLink">
-  Logout
-</a></Grid>
+                  <Grid item>Logout 3</Grid>
                 </Grid>
               </Link>
             </Box>
