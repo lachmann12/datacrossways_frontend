@@ -44,6 +44,23 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
 
   const navigate = useNavigate();
   
+  const handleLogout = async () => {
+    try {
+      // Make a request to the backend to log the user out
+      const currentProtocol = window.location.protocol; 
+      const currentHostname = window.location.hostname;
+      const apiUrl = `${currentProtocol}//${currentHostname}/api/user/logout`;
+      const response = await fetch(apiUrl, { method: 'GET' });
+  
+      navigate('/');
+      
+    } catch (error) {
+      // Handle network error
+      console.error('Network error during logout', error);
+    }
+  };
+  
+
   function handleLogout(event) {
     
     const currentProtocol = window.location.protocol; 
