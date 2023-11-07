@@ -25,7 +25,6 @@ import { EditModal } from "../../../common/edit-modal";
 import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
-import { useNavigate } from "react-router-dom";
 
 
 const style = {
@@ -44,20 +43,6 @@ const style = {
 
 export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
   
-  const navigate = useNavigate();
-  
-  const handleLogout = async () => {
-    try {
-      // Make a request to the backend to log the user out
-      const response = await fetch('/api/user/logout', { method: 'GET', credentials: 'include' });
-      navigate('/');
-    } catch (error) {
-      // Handle network error
-      console.error('Network error during logout', error);
-    }
-  };
-  
-
   const {
     data: user,
     isLoading,
@@ -234,7 +219,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                     <Grid item sx={{ marginRight: "8px" }}>
                       <img src={exitIcon} alt="Exit icon" />
                     </Grid>
-                    <Grid item>Logout ok</Grid>
+                    <Grid item>Logout</Grid>
                   </Grid>
               </a>
             </Box>

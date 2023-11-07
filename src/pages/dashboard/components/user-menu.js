@@ -25,7 +25,6 @@ import { EditModal } from "../../../common/edit-modal";
 import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
-import { useNavigate } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -41,20 +40,7 @@ const style = {
 };
 
 export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
-  const navigate = useNavigate();
   
-  const handleLogout = async () => {
-    try {
-      // Make a request to the backend to log the user out
-      const response = await fetch('/api/user/logout', { method: 'GET', credentials: 'include' });
-      navigate('/');
-    } catch (error) {
-      // Handle network error
-      console.error('Network error during logout', error);
-    }
-  };
-  
-
   const {
     data: user,
     isLoading,
@@ -221,14 +207,18 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 alignItems: "center",
               }}
             >
-              <Link className="exitLink" onClick={handleLogout}>
+              <a
+                className="modalLinks"
+                href="/api/user/logout"
+                rel="noreferrer"
+              >
                 <Grid container>
-                  <Grid item sx={{ marginRight: "8px" }}>
-                    <img src={exitIcon} alt="Exit icon" />
+                    <Grid item sx={{ marginRight: "8px" }}>
+                      <img src={exitIcon} alt="Exit icon" />
+                    </Grid>
+                    <Grid item>Logout</Grid>
                   </Grid>
-                  <Grid item>Logout</Grid>
-                </Grid>
-              </Link>
+              </a>
             </Box>
           </Box>
 
