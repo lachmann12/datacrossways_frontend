@@ -126,8 +126,9 @@ export const MyFiles = () => {
                 toggleSidebar={toggle}
                 user={user}
               />
+              <FooterSection />
             </Main>
-            <FooterSection />
+            
             <UploadProgressAccordion />
           </Box>
         </FileUploadContextProvider>
