@@ -10,6 +10,7 @@ import { MainHeader } from "./components/main-header";
 import { MainTable } from "./components/main-table";
 import { FilterContextProvider } from "./filter-context";
 import { Helmet } from "react-helmet-async";
+import { FooterSection } from "../../layout/compactfooter";
 
 const drawerWidth = 344;
 
@@ -109,9 +110,12 @@ export const Dashboard = () => {
             <DrawerHeader />
             <MainHeader />
             <MainTable sidebarOpen={open} toggleSidebar={toggle} />
+            
+            <FooterSection />
           </Main>
         </Box>
       </FilterContextProvider>
+
     </>
   );
 };

@@ -21,9 +21,7 @@ import { MainPoliciesHeader } from "./policies/main-header";
 import { MainPoliciesTable } from "./policies/main-table";
 import { MainUsersHeader } from "./users/main-header";
 import { MainUsersTable } from "./users/main-table";
-
-import { FooterSection } from "../../layout/footer";
-
+import { FooterSection } from "../../layout/compactfooter";
 const drawerWidth = 344;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -182,8 +180,8 @@ export const Admin = () => {
                 />
               </>
             )}
+            <FooterSection />
           </Main>
-          <FooterSection />
         </Box>
       </FilterContextProvider>
       

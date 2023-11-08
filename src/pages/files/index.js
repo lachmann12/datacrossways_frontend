@@ -14,7 +14,7 @@ import { getLoggedUser } from "../../api/user";
 import { useQuery } from "react-query";
 import { FileUploadContextProvider } from "./file-upload-context";
 import UploadProgressAccordion from "./components/upload-progress-accordion";
-
+import { FooterSection } from "../../layout/compactfooter";
 const drawerWidth = 344;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -127,6 +127,7 @@ export const MyFiles = () => {
                 user={user}
               />
             </Main>
+            <FooterSection />
             <UploadProgressAccordion />
           </Box>
         </FileUploadContextProvider>
