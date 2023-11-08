@@ -59,7 +59,7 @@ export const EditProfileForm = ({ isEdit, data, isLoading, error }) => {
           <Typography>{data.last_name}</Typography>
         )}
       </Grid>
-      {data.email && (
+      {data.email && data.email.length > 3 && (
         <Grid container justifyContent="space-between" margin="24px 0">
           <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
             Email:{" "}
@@ -67,7 +67,7 @@ export const EditProfileForm = ({ isEdit, data, isLoading, error }) => {
           <Typography>{data.email}</Typography>
         </Grid>
       )}
-      {data.orcid_id && (
+      {data.orcid_id && data.orcid_id.length && (
         <Grid container justifyContent="space-between" margin="24px 0">
           <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
             ORCID iD:{" "}
