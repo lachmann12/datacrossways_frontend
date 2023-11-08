@@ -77,6 +77,7 @@ const columns = [
           config.date_format
         );
       } catch {
+        console.error("Invalid or incorrect date format:", params.value);
         return "Invalid Date";
       }
     },
