@@ -59,12 +59,22 @@ export const EditProfileForm = ({ isEdit, data, isLoading, error }) => {
           <Typography>{data.last_name}</Typography>
         )}
       </Grid>
-      <Grid container justifyContent="space-between" margin="24px 0">
-        <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
-          Email:{" "}
-        </Typography>
-        <Typography>{data.email}</Typography>
-      </Grid>
+      {data.email && (
+        <Grid container justifyContent="space-between" margin="24px 0">
+          <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
+            Email:{" "}
+          </Typography>
+          <Typography>{data.email}</Typography>
+        </Grid>
+      )}
+      {data.orcid_id && (
+        <Grid container justifyContent="space-between" margin="24px 0">
+          <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
+            ORCID iD:{" "}
+          </Typography>
+          <Typography>{data.orcid_id}</Typography>
+        </Grid>
+      )}
       <Grid container justifyContent="space-between" margin="24px 0">
         <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
           Institution:{" "}
