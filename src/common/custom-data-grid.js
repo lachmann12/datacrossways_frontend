@@ -68,7 +68,7 @@ const columns = [
     sortable: false,
     flex: 1,
     valueFormatter: (params) => {
-      if (params.value === null) {
+      if (params.value === null || params.value === undefined) {
         return "";
       }
       try {
@@ -78,6 +78,7 @@ const columns = [
         );
       } catch {
         console.error("Invalid or incorrect date format:", params.value);
+        console.log(params)
         return "Invalid Date";
       }
     },

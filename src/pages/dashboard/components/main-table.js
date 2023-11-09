@@ -20,10 +20,12 @@ const useData = ({ page, pageSize, filterState, collectionId }) => {
     .sort() // sort alphabetically
     .map((key) => key + "." + filterState[key]) // add values to keys, example: /creator/name.c0
     .join(","); // join all with comma
-  const transformData = (data) => ({
-    ...data,
-    files: data.files.map((entry) => ({ ...entry, creation_date: entry.date })),
-  });
+  
+  //  const transformData = (data) => ({
+  //  ...data,
+  //  files: data.files.map((entry) => ({ ...entry, creation_date: entry.date })),
+  //});
+  const transformData = (data) => data; // Simply return the data as is without transformation
 
   const offset = page * pageSize;
   const queryKey = isUserFiles
