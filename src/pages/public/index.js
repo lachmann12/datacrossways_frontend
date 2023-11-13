@@ -11,6 +11,27 @@ import { NewsSection } from "./components/news-section";
 import data from "../../data/config.json";
 import { UserMenu } from "../dashboard/components/user-menu";
 import React, { useState, useEffect } from 'react';
+import MuiAppBar from "@mui/material/AppBar";
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  boxShadow: "none",
+  background: "#EFF4F5",
+  height: "93px",
+  transition: theme.transitions.create(["margin", "width"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: `${drawerWidth}px`,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
+}));
 
 export const PublicPage = () => {
 
