@@ -9,8 +9,34 @@ import { ContactUs } from "./components/contact-us";
 import { Jumbotron } from "./components/jumbotron";
 import { NewsSection } from "./components/news-section";
 import data from "../../data/config.json";
+import { UserMenu } from "../dashboard/components/user-menu";
+import React, { useState, useEffect } from 'react';
 
 export const PublicPage = () => {
+
+  const [hasUserId, setHasUserId] = useState(false);
+  const [open, setOpen] = useState(false); // Assuming you have a state for the sidebar
+  
+  const toggle = () => {
+    setOpen(!open);
+  };
+
+  useEffect(() => {
+    const checkUserId = async () => {
+      try {
+        const response = await fetch('/api/user/i');
+        const data = await response.json();
+        if (data && data.id) {
+          setHasUserId(true);
+        }
+      } catch (error) {
+        console.log('Error fetching user data:', error);
+      }
+    };
+    
+    checkUserId();
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -21,7 +47,13 @@ export const PublicPage = () => {
           content="Beginner friendly page for learning React Helmet."
         />
       </Helmet>
-      <NavBar />
+      {hasUserId ? (
+        <AppBar position="fixed" open={open}>
+          <UserMenu sidebarOpen={open} toggleSidebar={toggle} />
+        </AppBar>
+      ) : (
+        <NavBar />
+      )}
       <Jumbotron />
       <AvailableData />
       <DataCollections />

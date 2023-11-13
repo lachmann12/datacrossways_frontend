@@ -27,22 +27,36 @@ import config from "../../../data/config.json";
 
 const MISSING_DATA_TEXT = "Missing data";
 const getEmailLink = (params) => {
-  const email = params?.row?.email ?? MISSING_DATA_TEXT;
-  return (
-    <a
-      href={`mailto:${email}`}
-      style={{
+  const email = params?.row?.email;
+  if (!email) {
+    return (
+      <span style={{
         background: "linear-gradient(97.08deg, #F38B97 20.01%, #F4904D 75.82%)",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         backgroundClip: "text",
         textFillColor: "transparent",
-        textDecoration: "none",
-      }}
-    >
-      {email}
-    </a>
-  );
+      }}>
+        {MISSING_DATA_TEXT}
+      </span>
+    );
+  } else {
+    return (
+      <a
+        href={`mailto:${email}`}
+        style={{
+          background: "linear-gradient(97.08deg, #F38B97 20.01%, #F4904D 75.82%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+          textDecoration: "none",
+        }}
+      >
+        {email}
+      </a>
+    );
+  }
 };
 
 const columns = [
