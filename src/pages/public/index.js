@@ -12,6 +12,9 @@ import data from "../../data/config.json";
 import { UserMenu } from "../dashboard/components/user-menu";
 import React, { useState, useEffect } from 'react';
 import MuiAppBar from "@mui/material/AppBar";
+import { styled } from "@mui/material/styles";
+
+const drawerWidth = 344;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
