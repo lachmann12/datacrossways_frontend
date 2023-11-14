@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/dashboard";
 import { MyFiles } from "./pages/files";
 import { Admin } from "./pages/admin";
+import { LogoutPage } from "./pages/logout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/search" element={<Dashboard />} />
             <Route path="/myfiles" element={<MyFiles />} />
             <Route path="/admin/:page" element={<Admin />} />
+            <Route path="/logout" element={<LogoutPage />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

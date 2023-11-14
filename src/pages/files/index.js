@@ -15,6 +15,9 @@ import { useQuery } from "react-query";
 import { FileUploadContextProvider } from "./file-upload-context";
 import UploadProgressAccordion from "./components/upload-progress-accordion";
 import { FooterSection } from "../../layout/compactfooter";
+
+import { useHistory } from 'react-router-dom';
+
 const drawerWidth = 344;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -66,6 +69,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export const MyFiles = () => {
   const [open, setOpen] = useState(true);
+  const history = useHistory(); // Hook from 'react-router-dom' for navigation
 
   const toggle = () => setOpen((state) => !state);
 
@@ -76,7 +80,11 @@ export const MyFiles = () => {
   } = useQuery(["user/getLoggedUser"], () => getLoggedUser());
 
   if (isLoading) return "Loading...";
-  if (error) return "There was a problem loading this page";
+  if (error) {
+    setTimeout(() => history.push('/logout'), 0); // Redirect after a tick to avoid React state update warnings
+    // Alternatively, you can show an error message or a button to retry or logout.
+    return "There was a problem loading this page";
+  }
 
   return (
     <>
