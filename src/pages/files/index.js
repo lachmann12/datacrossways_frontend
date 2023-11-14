@@ -73,6 +73,13 @@ export const MyFiles = () => {
   
   const toggle = () => setOpen((state) => !state);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/logout');
+    }, 60*1000*10);
+    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
+  }, [navigate]);
+
   const {
     data: user,
     isLoading,
