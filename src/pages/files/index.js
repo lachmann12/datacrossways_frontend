@@ -17,6 +17,7 @@ import UploadProgressAccordion from "./components/upload-progress-accordion";
 import { FooterSection } from "../../layout/compactfooter";
 
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const drawerWidth = 344;
 
@@ -76,7 +77,7 @@ export const MyFiles = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/logout');
-    }, 60*1000*10);
+    }, 60*1000*5);
     return () => clearTimeout(timer); // Cleanup the timer when component unmounts
   }, [navigate]);
 
