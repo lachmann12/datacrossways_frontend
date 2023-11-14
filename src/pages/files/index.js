@@ -16,7 +16,7 @@ import { FileUploadContextProvider } from "./file-upload-context";
 import UploadProgressAccordion from "./components/upload-progress-accordion";
 import { FooterSection } from "../../layout/compactfooter";
 
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 344;
 
@@ -69,8 +69,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export const MyFiles = () => {
   const [open, setOpen] = useState(true);
-  const history = useHistory(); // Hook from 'react-router-dom' for navigation
-
+  const navigate = useNavigate();
+  
   const toggle = () => setOpen((state) => !state);
 
   const {
@@ -81,7 +81,7 @@ export const MyFiles = () => {
 
   if (isLoading) return "Loading...";
   if (error) {
-    setTimeout(() => history.push('/logout'), 0); // Redirect after a tick to avoid React state update warnings
+    setTimeout(() => navigate("/logout"), 0); // Redirect after a tick to avoid React state update warnings
     // Alternatively, you can show an error message or a button to retry or logout.
     return "There was a problem loading this page";
   }
