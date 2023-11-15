@@ -75,6 +75,17 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export const Admin = () => {
+
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/logout');
+    }, 60*1000*10);
+    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
+  }, [navigate]);
+
+
   const [open, setOpen] = useState(true);
   const toggle = () => setOpen((state) => !state);
   const params = useParams();
@@ -95,17 +106,7 @@ export const Admin = () => {
     // Alternatively, you can show an error message or a button to retry or logout.
     return "There was a problem loading this page";
   }
-
-
-  const navigate = useNavigate();
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate('/logout');
-    }, 60*1000*10);
-    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
-  }, [navigate]);
-
-
+  
   return (
     <>
       <Helmet>

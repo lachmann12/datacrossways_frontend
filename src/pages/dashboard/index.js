@@ -12,6 +12,8 @@ import { FilterContextProvider } from "./filter-context";
 import { Helmet } from "react-helmet-async";
 import { FooterSection } from "../../layout/compactfooter";
 import { useNavigate } from 'react-router-dom';
+import { getLoggedUser } from "../../api/user";
+import { useQuery } from "react-query";
 
 const drawerWidth = 344;
 
