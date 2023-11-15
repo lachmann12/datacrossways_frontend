@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
@@ -11,6 +11,7 @@ import { MainTable } from "./components/main-table";
 import { FilterContextProvider } from "./filter-context";
 import { Helmet } from "react-helmet-async";
 import { FooterSection } from "../../layout/compactfooter";
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 344;
 
@@ -65,6 +66,27 @@ export const Dashboard = () => {
   const [open, setOpen] = useState(true);
 
   const toggle = () => setOpen((state) => !state);
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/logout');
+    }, 60*1000*10);
+    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
+  }, [navigate]);
+
+  const {
+    userdata: user,
+    isLoading,
+    error,
+  } = useQuery(["user/getLoggedUser"], () => getLoggedUser());
+
+  if (isLoading) return "Loading...";
+  if (error) {
+    setTimeout(() => navigate("/logout"), 0); // Redirect after a tick to avoid React state update warnings
+    // Alternatively, you can show an error message or a button to retry or logout.
+    return "There was a problem loading this page";
+  }
 
   return (
     <>

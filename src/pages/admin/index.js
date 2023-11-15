@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import MuiAppBar from "@mui/material/AppBar";
@@ -22,6 +22,9 @@ import { MainPoliciesTable } from "./policies/main-table";
 import { MainUsersHeader } from "./users/main-header";
 import { MainUsersTable } from "./users/main-table";
 import { FooterSection } from "../../layout/compactfooter";
+import { useNavigate } from 'react-router-dom';
+
+
 const drawerWidth = 344;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -87,7 +90,21 @@ export const Admin = () => {
   } = useQuery(["user/getLoggedUser"], () => getLoggedUser());
 
   if (isLoading) return "Loading...";
-  if (error) return "There was a problem loading this page";
+  if (error){
+    setTimeout(() => navigate("/logout"), 0); // Redirect after a tick to avoid React state update warnings
+    // Alternatively, you can show an error message or a button to retry or logout.
+    return "There was a problem loading this page";
+  }
+
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/logout');
+    }, 60*1000*10);
+    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
+  }, [navigate]);
+
 
   return (
     <>

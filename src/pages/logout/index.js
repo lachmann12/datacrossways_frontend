@@ -39,7 +39,7 @@ export const LogoutPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate('/');
-    }, 3000); // Redirect after 5 seconds
+    }, 3000);
 
     return () => clearTimeout(timer); // Cleanup the timer when component unmounts
   }, [navigate]);

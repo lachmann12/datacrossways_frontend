@@ -13,6 +13,7 @@ import { UserMenu } from "../dashboard/components/user-menu";
 import React, { useState, useEffect } from 'react';
 import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 344;
 
@@ -44,6 +45,14 @@ export const PublicPage = () => {
   const toggle = () => {
     setOpen(!open);
   };
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate('/logout');
+    }, 60*1000*10);
+    return () => clearTimeout(timer); // Cleanup the timer when component unmounts
+  }, [navigate]);
 
   useEffect(() => {
     const checkUserId = async () => {
