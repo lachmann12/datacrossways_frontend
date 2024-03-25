@@ -61,6 +61,28 @@ async function uploadSmallFile(id, file, onProgress, onError) {
   }
 }
 
+async function compute_checksum(file){
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+      const arrayBuffer = e.target.result;
+
+      try {
+          // Use the Web Crypto API to calculate the SHA-256 hash
+          const hashBuffer = await crypto.subtle.digest('SHA-256', arrayBuffer);
+
+          // Convert the hash to a hex string
+          const hashArray = Array.from(new Uint8Array(hashBuffer));
+          const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+          // Display the SHA-256 hash
+          return hashHex;
+      } catch (err) {
+          console.error('Hashing failed:', err);
+          return ""
+      }
+  };
+}
+
 // Upload large files
 // 3 endpoints:
 // 1. /file/startmultipart: https://lymecommons.org/rest#/file/post_file_startmultipart
