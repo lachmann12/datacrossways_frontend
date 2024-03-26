@@ -15,6 +15,7 @@ import profileIcon from "../../../image/profile-icon.svg";
 import conditionsIcon from "../../../image/conditions-icon.svg";
 import requestIcon from "../../../image/request-icon.svg";
 import apiIcon from "../../../image/applications-icon.svg";
+import helpIcon from "../../../image/help-icon.svg";
 import rightArrow from "../../../image/right-arrow.svg";
 import leftArrow from "../../../image/left-arrow.svg";
 import { Link, useLocation } from "react-router-dom";
