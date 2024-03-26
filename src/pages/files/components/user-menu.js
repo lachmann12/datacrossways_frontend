@@ -32,7 +32,7 @@ const style = {
   top: "97px",
   right: "38px",
   width: "600px",
-  height: "274px",
+  height: "294px",
   bgcolor: "#FFF",
   border: "0px",
   padding: "40px",
@@ -297,7 +297,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               )}
             <a
               className="modalLinks"
-              href="https://lymecommons.org/api/docs/"
+              href="https://lymecloud.org/api/docs/"
               target="_blank"
               rel="noreferrer"
             >
@@ -307,6 +307,20 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                   <img src={apiIcon} alt="applications icon" />
                 </Grid>
                 <Grid item>Applications (API)</Grid>
+              </Grid>
+            </a>
+            <a
+              className="modalLinks"
+              href="https://lymecloud.org/LymeCommons_User_Guide_v1.3.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Grid container>
+                <Grid item sx={{ marginRight: "12px" }}>
+                  {" "}
+                  <img src={helpIcon} alt="help icon" />
+                </Grid>
+                <Grid item>Documentation</Grid>
               </Grid>
             </a>
           </Box>
