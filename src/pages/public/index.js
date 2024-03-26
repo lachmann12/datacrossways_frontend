@@ -77,7 +77,7 @@ export const PublicPage = () => {
         <link rel="icon" type="image/png" href={data.general.project_icon} />
         <meta
           name="description"
-          content="Beginner friendly page for learning React Helmet."
+          content="Lymecloud: LymeCommons provides a unified resource to deposit, archive, and share data collected by researchers funded by the Cohen Lyme & Tickborne Disease Initiative."
         />
       </Helmet>
       {hasUserId ? (
@@ -89,7 +89,7 @@ export const PublicPage = () => {
       )}
       <Jumbotron />
       <AvailableData />
-      <DataCollections />
+      {hasUserId && <DataCollections />}
       {/*<NewsSection /> */}
       <ContactInformation />
       <ContactUs />
