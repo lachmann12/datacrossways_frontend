@@ -313,7 +313,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
             </a>
             <a
               className="modalLinks"
-              href="https://maayanlab-general.s3.us-east-2.amazonaws.com/LymeCommons_User_Guide_v1.3.pdf"
+              href="/LymeCommons_User_Guide_v1.3.pdf"
               target="_blank"
               rel="noreferrer"
               download
