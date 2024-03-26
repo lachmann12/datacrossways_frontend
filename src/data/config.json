@@ -81,26 +81,26 @@
       {
         "firstname": "Alexander",
         "lastname": "Lachmann",
-        "url_photo": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1274&q=80",
+        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2020/06/lachmann_a.png",
         "email": "alexander.lachmann@mssm.edu",
         "role": "Data Scientist",
         "bio": "Dr. Lachmann is a Research Assistant Professor in the Ma’ayan Laboratory of Computational Systems Biology and a member of the leadership team in the Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Dr. Lachmann earned his PhD in Biomedical Informatics from Columbia University and a Master’s degree in Computer Science from University of Aachen. Dr. Lachmann’s expertise is in the areas of systems biology and bioinformatics."
       },
       {
-        "firstname": "Daniel",
-        "lastname": "Clarke",
-        "url_photo": "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "email": "daniel.clarke@mssm.edu",
-        "role": "Data Scientist",
-        "bio": "Mr. Clarke is a Senior Data Scientist in the Ma’ayan Laboratory of Computational Systems Biology and a member of the leadership team in the Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Mr. Clarke holds a Bachelor of Science and Master of Science in Computer and Electrical Engineering from Fairleigh Dickinson University. He has extensive biomedical software engineering experience from various projects in both professional and academic settings. Before joining the Ma’ayan Laboratory, Mr. Clarke worked on robotics, machine learning, and healthcare data mining projects."
+        "firstname": "Avi",
+        "lastname": "Ma'ayan",
+        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2014/10/a_maayan_wide.png",
+        "email": "avi.maayan@mssm.edu",
+        "role": "Principal Investigator",
+        "bio": "Dr. Ma’ayan is a Mount Sinai Endowed Professor in Bioinformatics, Director of the Mount Sinai Center for Bioinformatics, Professor in the Department of Pharmacological Sciences, Professor in the Department of Artificial Intelligence and Human Health, and faculty member of the Icahn Genomics Institute. Dr. Ma'ayan is also a Principal Investigator of the NIH Common Fund Data Resource Center (DRC) for the Common Fund Data Ecosystem (CFDE), a NCI-funded ITCR resource center, a NIDDK-funded diabetes hypothesis platform, and the NCI-funded Mount Sinai Proteogenomic Data Analysis Center. The Ma'ayan Laboratory applies computational methods to study the inner workings of regulatory networks in mammalian cells. His research team applies machine learning and other statistical mining techniques to study how intracellular regulatory systems function as networks to control cellular processes such as differentiation, dedifferentiation, apoptosis and proliferation. The Ma'ayan Laboratory develops bioinformatics software applications to enable experimental biologists to form novel hypotheses from high-throughput omics datasets, while aiming to better understand the structure and function of regulatory networks in mammalian cellular and multi-cellular complex systems."
       },
       {
-        "firstname": "John Erol",
-        "lastname": "Evangelista",
-        "url_photo": "https://images.unsplash.com/photo-1455218873509-8097305ee378?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-        "email": "johnerol.evangelista@mssm.edu",
-        "role": "Software Developer",
-        "bio": "Mr. Evangelista is a Bioinformatician in the Ma’ayan Laboratory of Computational Systems Biology and Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Mr. Evangelista earned a Bachelor of Science and Master of Science in Computer Science from the University of the Philippines Diliman. Before joining the Ma’ayan Laboratory, he gained experience in two other computational biology laboratories within the Philippine Genome Center. His current research includes developing cloud computing solutions for automated processing of omics data as well as methods to benchmark various pipelines to generate processed data."
+        "firstname": "Heesu",
+        "lastname": "Kim",
+        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2022/11/c_kim.png",
+        "email": "heesu.kim@mssm.edu",
+        "role": "Systems Analyst",
+        "bio": "Ms. Kim is a Systems Analyst in the Ma’ayan Laboratory of Computational Systems Biology and Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Ms. Kim earned a Bachelor of Science in Computer Science and Information Engineering at Inha University (South Korea), and her MS in Business Analytics and MBA at Hult International Business School."
       }
     ],
     "collections_highlight": {
