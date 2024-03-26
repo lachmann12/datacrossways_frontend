@@ -15,6 +15,7 @@ import profileIcon from "../../../image/profile-icon.svg";
 import conditionsIcon from "../../../image/conditions-icon.svg";
 import requestIcon from "../../../image/request-icon.svg";
 import apiIcon from "../../../image/applications-icon.svg";
+import helpIcon from "../../../image/help-icon.svg";
 import rightArrow from "../../../image/right-arrow.svg";
 import leftArrow from "../../../image/left-arrow.svg";
 import { Link, useLocation } from "react-router-dom";
@@ -308,6 +309,21 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                   <img src={apiIcon} alt="applications icon" />
                 </Grid>
                 <Grid item>Applications (API)</Grid>
+              </Grid>
+            </a>
+            <a
+              className="modalLinks"
+              href="https://maayanlab-general.s3.us-east-2.amazonaws.com/LymeCommons_User_Guide_v1.3.pdf"
+              target="_blank"
+              rel="noreferrer"
+              download
+            >
+              <Grid container>
+                <Grid item sx={{ marginRight: "12px" }}>
+                  {" "}
+                  <img src={helpIcon} alt="help icon" />
+                </Grid>
+                <Grid item>Documentation</Grid>
               </Grid>
             </a>
           </Box>
