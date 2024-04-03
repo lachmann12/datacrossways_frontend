@@ -55,7 +55,7 @@ export const FooterSection = () => {
                 fontWeight: 500,
               }}
             >
-              © 2023 {data.general.projectname}. All rights reserved.
+              © 2024 {data.general.projectname}. All rights reserved.
             </Typography>
           </Grid>
           <Grid item xs={12} lg={4} className="rightsLogo">

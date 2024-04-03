@@ -167,7 +167,7 @@ export const NavBar = () => {
                 ))}
               </Box>
               <Typography id="modal-modal-description" variant="body4">
-                Note: DataCrossways uses Google for authentication purposes
+                Note: LymeCloud uses Google for authentication purposes
                 only. The application will not have access to your private data,
                 and will not send you any e-mails.
               </Typography>

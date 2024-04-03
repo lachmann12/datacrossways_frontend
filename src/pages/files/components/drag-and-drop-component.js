@@ -60,7 +60,7 @@ export const DragAndDrop = () => {
             textAlign: "center",
           }}
         >
-          Maximun file size:{" "}
+          Maximum file size:{" "}
           {getReadableFileSizeString(data.my_files_page.upload_files.max_size)}
         </Typography>
         <Typography
@@ -71,7 +71,7 @@ export const DragAndDrop = () => {
             textAlign: "center",
           }}
         >
-          Maximun of files: {data.my_files_page.upload_files.max_n_files}
+          Maximum of files: {data.my_files_page.upload_files.max_n_files}
         </Typography>
       </Box>
     </Container>

@@ -149,7 +149,7 @@ export const UploadFilesModal = ({ isOpen, onClose }) => {
                   color: "rgba(0, 53, 65, 0.4)",
                 }}
               >
-                Maximun file size:{" "}
+                Maximum file size:{" "}
                 {getReadableFileSizeString(
                   data.my_files_page.upload_files.max_size
                 )}
@@ -163,7 +163,7 @@ export const UploadFilesModal = ({ isOpen, onClose }) => {
                   color: "rgba(0, 53, 65, 0.4)",
                 }}
               >
-                Maximun of files: {data.my_files_page.upload_files.max_n_files}
+                Maximum of files: {data.my_files_page.upload_files.max_n_files}
               </Typography>
             </Box>
           </Grid>
