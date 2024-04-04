@@ -19,6 +19,7 @@ export const FileUploadContext = createContext({
   cancelAll: () => {},
   closeModal: () => {},
   cancelFile: () => {},
+  uploadComplete: () => {},
 });
 
 export const FileUploadContextProvider = ({ children }) => {
@@ -188,6 +189,6 @@ export const FileUploadContextProvider = ({ children }) => {
   );
 };
 
-export const useFileUpload = () => {
+export const useFileUploadContext = () => {
   return useContext(FileUploadContext);
 };

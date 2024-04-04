@@ -8,6 +8,7 @@ import { MainButtons } from "./main-buttons";
 import { searchFiles } from "../../../api/file";
 import { CustomDataGrid } from "../../../common/custom-data-grid";
 import { useFilterContext } from "../filter-context";
+import { useFileUploadContext } from "../file-upload-context";
 
 export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 }) => {
   const [selectionModel, setSelectionModel] = useState([]);
@@ -15,6 +16,7 @@ export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 
   const owner_id = user.id;
   const collectionId = searchParams.get("collectionId") ?? undefined;
   const { filterState } = useFilterContext();
+  const { uploadState } = useFileUploadContext();
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(10);
   const activeFiltersKey = Object.keys(filterState)
@@ -43,7 +45,7 @@ export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 
     setRowCountState((prevRowCountState) =>
       files?.total !== undefined ? files?.total : prevRowCountState
     );
-  }, [files?.total, setRowCountState]);
+  }, [files?.total, setRowCountState, uploadState]);
 
   if (error) return "There was a problem loading this page";
 
