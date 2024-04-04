@@ -12,7 +12,7 @@ import { FilterContextProvider } from "./filter-context";
 import { Helmet } from "react-helmet-async";
 import { getLoggedUser } from "../../api/user";
 import { useQuery } from "react-query";
-import { FileUploadContextProvider } from "./file-upload-context";
+import { FileUploadContextProvider, useFileUpload } from "./file-upload-context";
 import UploadProgressAccordion from "./components/upload-progress-accordion";
 import { FooterSection } from "../../layout/compactfooter";
 
@@ -71,7 +71,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export const MyFiles = () => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
-  const { uploadComplete } = useFileUpload();
+  const { uploadComplete } = useFileUpload(); // is defined in file-upload-context
 
   const toggle = () => setOpen((state) => !state);
 
