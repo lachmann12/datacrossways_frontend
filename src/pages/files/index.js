@@ -142,7 +142,7 @@ export const MyFiles = () => {
                 sidebarOpen={open}
                 toggleSidebar={toggle}
                 user={user}
-                uploadComplete={uploadComplete}
+                uploadCompleted={uploadComplete}
               />
               <FooterSection />
             </Main>
