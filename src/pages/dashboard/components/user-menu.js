@@ -41,7 +41,7 @@ const style = {
   boxShadow: "0px 0px 6px rgba(0, 43, 52, 0.25)",
 };
 
-export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
+export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
   
   const {
     data: user,
@@ -91,6 +91,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
           flexGrow: 1,
         }}
       >
+        {!landingPage && (
         <Box
           variant="text"
           color="inherit"
@@ -126,6 +127,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
             </Button>
           )}
         </Box>
+        )}
         {!sidebarOpen && (
           <Typography component="div" sx={{ marginLeft: "99px" }}>
             <Link to="/">

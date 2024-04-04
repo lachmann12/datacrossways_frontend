@@ -82,7 +82,7 @@ export const PublicPage = () => {
       </Helmet>
       {hasUserId ? (
         <AppBar position="fixed" open={open}>
-          <UserMenu sidebarOpen={open} toggleSidebar={toggle} />
+          <UserMenu sidebarOpen={open} toggleSidebar={toggle} landingPage={true} />
         </AppBar>
       ) : (
         <NavBar />
