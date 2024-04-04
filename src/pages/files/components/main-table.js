@@ -9,7 +9,7 @@ import { searchFiles } from "../../../api/file";
 import { CustomDataGrid } from "../../../common/custom-data-grid";
 import { useFilterContext } from "../filter-context";
 
-export const MainTable = ({ sidebarOpen, toggleSidebar, user }) => {
+export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 }) => {
   const [selectionModel, setSelectionModel] = useState([]);
   const [searchParams] = useSearchParams();
   const owner_id = user.id;

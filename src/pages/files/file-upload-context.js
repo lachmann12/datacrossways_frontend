@@ -23,7 +23,7 @@ export const FileUploadContext = createContext({
 
 export const FileUploadContextProvider = ({ children }) => {
   const [uploadingFiles, setUploadingFiles] = useState([]);
-
+  const [uploadComplete, setUploadComplete] = useState(0);
   const onProgress = useCallback((id, status, progress, controllers) => {
     setUploadingFiles((prevState) =>
       prevState.map((entry) =>
@@ -135,6 +135,7 @@ export const FileUploadContextProvider = ({ children }) => {
           },
         }))
       );
+      setUploadComplete((prev) => prev + 1); 
     }
   }, [totalPercentage]);
 
@@ -177,6 +178,7 @@ export const FileUploadContextProvider = ({ children }) => {
     cancelAll,
     closeModal,
     cancelFile,
+    uploadComplete,
   };
 
   return (

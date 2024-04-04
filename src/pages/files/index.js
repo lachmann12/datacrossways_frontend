@@ -71,7 +71,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 export const MyFiles = () => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
-  
+  const { uploadComplete } = useFileUpload();
+
   const toggle = () => setOpen((state) => !state);
 
   useEffect(() => {
@@ -141,6 +142,7 @@ export const MyFiles = () => {
                 sidebarOpen={open}
                 toggleSidebar={toggle}
                 user={user}
+                uploadComplete={uploadComplete}
               />
               <FooterSection />
             </Main>
