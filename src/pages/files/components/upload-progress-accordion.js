@@ -6,7 +6,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { Box, Button, Grid } from "@mui/material";
-import { useFileUpload } from "../file-upload-context";
+import { useFileUploadContext } from "../file-upload-context";
 import uploadIcon from "../../../image/upload-icon.svg";
 import failedUploadIcon from "../../../image/failed-upload-icon.svg";
 import closeIcon from "../../../image/close-icon.svg";
@@ -84,7 +84,8 @@ export default function UploadProgressAccordion() {
     cancelAll,
     closeModal,
     cancelFile,
-  } = useFileUpload();
+    uploadComplete,
+  } = useFileUploadContext();
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {

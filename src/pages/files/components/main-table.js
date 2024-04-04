@@ -16,7 +16,7 @@ export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 
   const owner_id = user.id;
   const collectionId = searchParams.get("collectionId") ?? undefined;
   const { filterState } = useFilterContext();
-  const { uploadState } = useFileUploadContext();
+  const { uploadComplete } = useFileUploadContext();
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(10);
   const activeFiltersKey = Object.keys(filterState)
@@ -45,7 +45,7 @@ export const MainTable = ({ sidebarOpen, toggleSidebar, user, uploadComplete=-1 
     setRowCountState((prevRowCountState) =>
       files?.total !== undefined ? files?.total : prevRowCountState
     );
-  }, [files?.total, setRowCountState, uploadState]);
+  }, [files?.total, setRowCountState, uploadComplete]);
 
   if (error) return "There was a problem loading this page";
 

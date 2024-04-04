@@ -5,7 +5,7 @@ import React from "react";
 import { useDropzone } from "react-dropzone";
 import "./drag-and-drop-component.css";
 import getReadableFileSizeString from "../../../common/readable-file-size";
-import { useFileUpload } from "../file-upload-context";
+import { useFileUploadContext } from "../file-upload-context";
 
 const styleModal = {
   position: "absolute",
@@ -38,7 +38,7 @@ function maxSizeFile(file) {
 }
 
 export const UploadFilesModal = ({ isOpen, onClose }) => {
-  const { uploadFiles } = useFileUpload();
+  const { uploadFiles } = useFileUploadContext();
   const { getRootProps, getInputProps } =
     useDropzone({
       maxFiles: maxFiles,

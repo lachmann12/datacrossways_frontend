@@ -4,7 +4,7 @@ import { useDropzone } from "react-dropzone";
 import "./drag-and-drop-component.css";
 import data from "../../../data/config.json";
 import getReadableFileSizeString from "../../../common/readable-file-size";
-import { useFileUpload } from "../file-upload-context";
+import { useFileUploadContext } from "../file-upload-context";
 
 const maxFiles = data.my_files_page.upload_files.max_n_files;
 const maxSize = data.my_files_page.upload_files.max_size;
@@ -21,7 +21,7 @@ function maxSizeFile(file) {
 }
 
 export const DragAndDrop = () => {
-  const { uploadFiles } = useFileUpload();
+  const { uploadFiles } = useFileUploadContext();
   const { getRootProps, getInputProps } = useDropzone({
     maxFiles: maxFiles,
     validator: maxSizeFile,
