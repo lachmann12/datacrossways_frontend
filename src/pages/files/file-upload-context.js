@@ -125,7 +125,7 @@ export const FileUploadContextProvider = ({ children }) => {
     totalUploadSize === 0 ? null : (totalUploaded / totalUploadSize) * 100;
 
   useEffect(() => {
-    if (totalPercentage === 100) {
+    if (totalPercentage > 98) {
       // sets all uploads as settled, this will reset the total percentage back to 0
       setUploadingFiles((prevState) =>
         prevState.map((entry) => ({
@@ -136,6 +136,7 @@ export const FileUploadContextProvider = ({ children }) => {
           },
         }))
       );
+      console.log("upload complete")
       setUploadComplete((prev) => prev + 1); 
     }
   }, [totalPercentage]);
