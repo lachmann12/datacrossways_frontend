@@ -10,6 +10,7 @@ To change the default look of Datacrossways follow the steps below:
 
 1) Fork of the existing Datacrossways frontend repository to create a personal copy to modify.
  <img width="975" alt="image" src="https://github.com/MaayanLab/datacrossways_frontend/assets/32603869/20cfdb24-7e35-4445-b223-2c0296f114d3">
+ 
 2) Clone the newly created GitHub repository to work on it.
 
 ### `npm start`
