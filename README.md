@@ -15,6 +15,9 @@ To change the default look of Datacrossways follow the steps below:
    (There are several places that will need modification to customize the frontend. A more detailed example will be provided in the future)
 
 3) To deploy the changes of the Datacrossways frontend use the Datacrossways deployment process and follow the step-by-step instructions until you reach the section called `Cloud deployment`. At this stage some modifications on the start scripts have to be performed. Log into the server that hosts datacrossways using ssh. Modify the Dockerwise of the frontend ```vi ~/datacrossways/frontend/Dockerfile```. Change line ```RUN git clone https://github.com/MaayanLab/datacrossways_frontend.git``` to point to the modified repository. Change all entries containing `datacrossways_frontend` to point to the correct folder. (this is in case the repository was renamed and is not needed if the repository is still called datacrossways_frontend).
+4) After redirecting the Dockerfile to the new repository continue as normal with the deployment.
+
+Instead of modifying the deployment script on the hosting server, working on a forked Datacrossways repository and modifying the Docker file directly is also possible.
 
 ### `npm start`
 
