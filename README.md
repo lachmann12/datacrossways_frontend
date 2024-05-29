@@ -19,6 +19,10 @@ To change the default look of Datacrossways follow the steps below:
 
 Instead of modifying the deployment script on the hosting server, working on a forked Datacrossways repository and modifying the Docker file directly is also possible.
 
+### `npm install`
+
+Run this first to install all dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.\
