@@ -1,5 +1,6 @@
 import { Grid, Box, Link, Typography } from "@mui/material";
-import logo2 from "../image/footer-logo-2.svg";
+import logo2 from "../image/logo512.png";
+import logo_lab from "../image/logo_ml.png";
 import blobImg from "../image/footer-blob-gradient.svg";
 import data from "../data/config.json";
 import { styled } from "@mui/system";
@@ -58,8 +59,8 @@ export const FooterSection = () => {
         >
           <Grid item xs={12} lg={1} className="imageFooter">
             <img
-              src={data.general.footer.image_url}
-              alt="Lymemind footer logo"
+              src={logo2}
+              alt="footer logo"
               style={{ width: "111px", height: "114px" }}
             />
           </Grid>
@@ -109,16 +110,20 @@ export const FooterSection = () => {
               }}
               className="blobBox"
             >
-              <img src={blobImg} alt="Blob grandient" />
+              
             </Box>
             <Box
               sx={{
                 width: 106,
-                height: 93,
+                height: "auto",
                 marginTop: "30px",
               }}
             >
-              <img src={logo2} alt="Lymemind footer logo" />
+               <img
+                src={logo_lab}
+                alt="footer logo"
+                style={{ height: "114px" }}
+              />
             </Box>
           </Grid>
         </Grid>
@@ -146,7 +151,7 @@ export const FooterSection = () => {
           <Grid item xs={12} lg={4} className="rightsLogo">
             <img
               src={data.general.project_logo}
-              alt="Lymemind logo"
+              alt="logo"
               style={{ width: "182px", height: "auto" }}
             />
           </Grid>

@@ -89,7 +89,11 @@ export const PublicPage = () => {
       )}
       <Jumbotron />
       <AvailableData />
-      {hasUserId && <DataCollections />}
+      {hasUserId ? (
+        <DataCollections />
+      ) : (
+        null
+      )}
       {/*<NewsSection /> */}
       <ContactInformation />
       <ContactUs />

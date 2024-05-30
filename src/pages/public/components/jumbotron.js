@@ -1,5 +1,5 @@
 import { Grid, Box, Typography } from "@mui/material";
-import heroImg1 from "../../../image/hero-img-01.png";
+import heroImg1 from "../../../image/hero-img-02.svg";
 import heroImg2 from "../../../image/hero-img-02.png";
 import blobImg from "../../../image/blob-gradient.svg";
 import data from "../../../data/config.json";
@@ -71,26 +71,11 @@ export const Jumbotron = () => {
           <Box
             sx={{
               position: "absolute",
-              top: 40,
-              left: 150,
-              zIndex: "1",
-              height: "auto",
-            }}
-            className="boxImg"
-          >
-            <img
-              src={heroImg2}
-              alt="Speaker"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: 326,
-              left: 340,
+              top: 126,
+              left: 140,
               zIndex: "2",
               height: "auto",
+              marginRight: "50px"
             }}
           >
             <img
@@ -99,21 +84,7 @@ export const Jumbotron = () => {
               style={{ width: "100%", height: "auto" }}
             />
           </Box>
-          <Box
-            sx={{
-              position: "absolute",
-              top: 315,
-              left: 0,
-              zIndex: "3",
-              height: "auto",
-            }}
-          >
-            <img
-              src={blobImg}
-              alt="Blob with grandient"
-              style={{ width: "100%", height: "auto" }}
-            />
-          </Box>
+          
         </Grid>
         <Grid
           item
@@ -125,7 +96,7 @@ export const Jumbotron = () => {
           }}
         >
           <Box
-            sx={{ maxWidth: "538px", marginTop: "-132px" }}
+            sx={{ maxWidth: "538px", marginTop: "-32px" }}
             className="jumbotronText"
           >
             <Typography variant="subtitle2" className="headerTitle">

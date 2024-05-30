@@ -28,7 +28,7 @@ export const ContactUs = () => {
       maxWidth="false"
       disableGutters={true}
       sx={{
-        backgroundColor: "#0F7F90",
+        backgroundColor: "#5b6fff",
         textAlign: "center",
         padding: "100px 0",
       }}

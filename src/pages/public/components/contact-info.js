@@ -43,7 +43,7 @@ export const ContactInformation = () => {
           top: "-241px",
         }}
       >
-        <img src={blobContat} alt="blob gradient" />
+        
       </Box>
       <Box
         className="blobContact"
@@ -53,7 +53,7 @@ export const ContactInformation = () => {
           zIndex: "2",
         }}
       >
-        <img src={blobContat2} alt="blob gradient" />
+        
       </Box>
 
       <Typography variant="subtitle1" className="titleSection">

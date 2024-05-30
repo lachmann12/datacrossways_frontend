@@ -12,8 +12,7 @@ export const theme = createTheme({
           props: { color: "primary" },
           style: {
             textDecoration: "none",
-            background:
-              "linear-gradient(90deg, #0F7F90 -8.75%, #00B08A 113.12%)",
+            background: "linear-gradient(90deg, #0F7F90 -8.75%, #00B08A 113.12%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
@@ -55,8 +54,7 @@ export const theme = createTheme({
             width: "109px",
             height: "53px",
             margin: "auto 30px",
-            background:
-              "linear-gradient(90deg, #0F7F90 -8.75%, #00B08A 113.12%)",
+            background: "#322CFF",
             outline: "4px solid rgba(0, 81, 99, 0.1)",
             boxShadow: "0px 4px 9px rgba(0, 176, 138, 0.22)",
             borderRadius: " 80px",
@@ -184,7 +182,7 @@ export const theme = createTheme({
 
   typography: {
     fontFamily: [
-      "Chakra Petch",
+      "Inter",
       "-apple-system",
       "BlinkMacSystemFont",
       "sans-serif",
@@ -223,7 +221,7 @@ export const theme = createTheme({
       letterSpacing: "0.15px",
     },
     subtitle1: {
-      color: "#0F7F90",
+      color: "#322CFF",
       fontWeight: 400,
       fontSize: "48px",
       lineHeight: "72px",
@@ -232,7 +230,7 @@ export const theme = createTheme({
       textAlign: "center",
     },
     subtitle2: {
-      color: "#0F7F90",
+      color: "#322CFF",
       fontWeight: 300,
       fontSize: "60px",
       lineHeight: "72px",

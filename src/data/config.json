@@ -1,21 +1,21 @@
 {
   "general": {
-    "projectname": "LymeMIND",
+    "projectname": "dataXways",
     "project_logo": "/image/logo.svg",
-    "project_title": "LymeCommons: Explore Available Lyme Disease Research Related Datasets",
-    "project_icon": "https://lymemind.org/favicon-32x32.png?v=b92f955b9316279dc79178f906b24804",
+    "project_title": "dataXways",
+    "project_icon": "/favicon.ico",
     "socialmedia": [
       {
         "name": "twitter",
         "icon_url": "/image/twitter-min.svg",
         "alt_name": "Twitter",
-        "url": "https://twitter.com/lymemind"
+        "url": "https://twitter.com/dataxways"
       },
       {
         "name": "youtube",
         "icon_url": "/image/youtube-icon.svg",
         "alt_name": "Youtube",
-        "url": "https://twitter.com/lymemind"
+        "url": "https://twitter.com/dataxways"
       },
       {
         "name": "github",
@@ -27,90 +27,82 @@
     "general_contact": {
       "adress": "770 Lexington Avenue, 15th Floor, New York, NY 10065",
       "phone": "212-731-7071",
-      "email": "lymemind@mssm.edu"
+      "email": "support@dataxways.cloud"
     },
     "footer": {
       "image_url": "/image/footer-logo.svg",
-      "description": "LymeMIND is made possible by generous support from the Cohen Lyme & Tickborne Disease Initiative. Launched in 2015, the Initiative seeks to gather the brightest minds within the research and medical communities to better understand and ultimately stop the rapid spread of tickborne illnesses. It has committed over $60 million to more than 25 research projects across the nation.",
+      "description": "Proudly developed by the Ma'ayan Lab at Mount Sinai, leveraging our expertise in data management and cloud solutions. This project is generously funded by the Alexandra and Steven Cohen Foundation, whose support has been instrumental in bringing this innovative platform to life.",
       "links": [
         {
           "text": "Home",
-          "url": "https://lymemind.org/"
+          "url": "https://dataxways.cloud/"
         },
         {
           "text": "Research Projects",
-          "url": "https://lymemind.org/research-projects"
+          "url": "https://dataxways.cloud/"
         },
         {
           "text": "Conference",
-          "url": "https://lymemind.org/upcoming-event"
+          "url": "https://dataxways.cloud/"
         },
         {
           "text": "Consortium",
-          "url": "https://lymemind.org/consortium"
+          "url": "https://dataxways.cloud/"
         },
         {
           "text": "Team",
-          "url": "https://lymemind.org/team"
+          "url": "https://dataxways.cloud/"
         },
         {
           "text": "About",
-          "url": "https://lymemind.org/about"
+          "url": "https://dataxways.cloud/"
         }
       ]
     }
   },
   "startpage": {
-    "title": "LymeCommons",
-    "subtitle": "LymeCommons provides a unified resource to deposit, archive, and share data collected by researchers funded by the Cohen Lyme & Tickborne Disease Initiative",
-    "about": "Explore Available Lyme Disease Research Related Datasets and Connect with Lyme Disease Researchers",
+    "title": "dataXways",
+    "subtitle": "Welcome to DataXways—your ultimate solution for seamless data management in the cloud. Our platform empowers you to efficiently handle massive datasets with ease and precision. By leveraging advanced regulatory controls, DataXways ensures that only authorized users have access to sensitive information, optimizing both security and accessibility. Visualize and organize your data effortlessly with our intuitive dashboard, which offers a comprehensive view into your data's structure, status, and accessibility. Whether you're managing databases, file systems, or streaming data, DataXways provides the tools you need to maintain control and clarity in a complex data-driven world. Elevate your data management experience with DataXways—where your data flows more efficiently and securely than ever before.",
+    "about": "Access data directly through the data portal or programmatically using the API.",
     "news": {
-      "name": "LymeMIND",
-      "username": "LymeMind",
+      "name": "dataXways",
+      "username": "dataXways",
       "profile_image_url": "https://pbs.twimg.com/profile_images/1284208844802076674/exJsbO5w_normal.png"
     },
     "contacts": [
       {
-        "firstname": "Bennett",
-        "lastname": "Nemser",
-        "url_photo": "https://www.steveandalex.org/wp-content/uploads/2020/02/Ben_Out_DSC01277.jpg",
-        "email": "",
+        "firstname": "Billie",
+        "lastname": "Boilerplate",
+        "url_photo": "/image/portrait/portrait_003.jpg",
+        "email": "boilerplate@dataxways.cloud",
         "role": "Chief Program Officer",
-        "bio": "Ben manages the foundation’s various health portfolios including the Cohen Psychedelic Research & Health Initiative and the Cohen Lyme & Tickborne Disease Initiative.  Dr. Nemser has a PhD in Public Health with extensive experience in global health systems in developing countries and related research.  Prior to joining the Foundation, Ben was a Senior Monitoring and Evaluation (M&E) Consultant for UNICEF and the World Health Organization (WHO).  After receiving a Master of Public Health from Columbia University, Ben worked for Columbia University as an Epidemiologist and Data Systems Manager.  In addition to his public health experience, Ben has a Master’s in Business Administration and a background in governmental finance and budgeting."
+        "bio": "A connoisseur of all things temporary, Billie enjoys experimenting with the latest in digital mockup technology.."
       },
       {
-        "firstname": "Alexander",
-        "lastname": "Lachmann",
-        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2020/06/lachmann_a.png",
-        "email": "alexander.lachmann@mssm.edu",
+        "firstname": "Sally",
+        "lastname": "Sampleton",
+        "url_photo": "/image/portrait/portrait_001.jpg",
+        "email": "sallysample@dataxways.cloud",
         "role": "Data Scientist",
-        "bio": "Dr. Lachmann is a Research Assistant Professor in the Ma’ayan Laboratory of Computational Systems Biology and a member of the leadership team in the Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Dr. Lachmann earned his PhD in Biomedical Informatics from Columbia University and a Master’s degree in Computer Science from University of Aachen. Dr. Lachmann’s expertise is in the areas of systems biology and bioinformatics."
+        "bio": "With an eye for detail, Sally brings the concept of placeholder text to life in every project she touches."
       },
       {
-        "firstname": "Avi",
-        "lastname": "Ma'ayan",
-        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2014/10/a_maayan_wide.png",
-        "email": "avi.maayan@mssm.edu",
+        "firstname": "Ima",
+        "lastname": "Mockup",
+        "url_photo": "/image/portrait/portrait_002.jpg",
+        "email": "mockupima@dataxways.cloud",
         "role": "Principal Investigator",
-        "bio": "Dr. Ma’ayan is a Mount Sinai Endowed Professor in Bioinformatics, Director of the Mount Sinai Center for Bioinformatics, Professor in the Department of Pharmacological Sciences, Professor in the Department of Artificial Intelligence and Human Health, and faculty member of the Icahn Genomics Institute. Dr. Ma'ayan is also a Principal Investigator of the NIH Common Fund Data Resource Center (DRC) for the Common Fund Data Ecosystem (CFDE), a NCI-funded ITCR resource center, a NIDDK-funded diabetes hypothesis platform, and the NCI-funded Mount Sinai Proteogenomic Data Analysis Center. The Ma'ayan Laboratory applies computational methods to study the inner workings of regulatory networks in mammalian cells. His research team applies machine learning and other statistical mining techniques to study how intracellular regulatory systems function as networks to control cellular processes such as differentiation, dedifferentiation, apoptosis and proliferation. The Ma'ayan Laboratory develops bioinformatics software applications to enable experimental biologists to form novel hypotheses from high-throughput omics datasets, while aiming to better understand the structure and function of regulatory networks in mammalian cellular and multi-cellular complex systems."
-      },
-      {
-        "firstname": "Heesu",
-        "lastname": "Kim",
-        "url_photo": "https://labs.icahn.mssm.edu/maayanlab/wp-content/uploads/sites/75/2022/11/c_kim.png",
-        "email": "heesu.kim@mssm.edu",
-        "role": "Systems Analyst",
-        "bio": "Ms. Kim is a Systems Analyst in the Ma’ayan Laboratory of Computational Systems Biology and Mount Sinai Center for Bioinformatics at the Icahn School of Medicine at Mount Sinai. Ms. Kim earned a Bachelor of Science in Computer Science and Information Engineering at Inha University (South Korea), and her MS in Business Analytics and MBA at Hult International Business School."
+        "bio": "Ima specializes in being everywhere and nowhere at once, seamlessly blending into any prototype."
       }
     ],
     "collections_highlight": {
-      "title": "LymeCommons supports the inclusion of diverse data types including DNA and mRNA sequencing data from patients, ticks, and bacteria; epidemological and clinical data froma Lyme disease patients; i vaccines for Lyme disease.",
+      "title": "dataXways supports the inclusion of diverse data types. Data is organized in collections which behave similar to folders.",
       "ids_list": [2]
     },
     "general_contact": {
-      "adress": "770 Lexington Avenue, 15th Floor, New York, NY 10065",
-      "phone": "212-731-7071",
-      "email": "lymemind@mssm.edu"
+      "adress": "1234 Placeholder Lane",
+      "phone": "111-111-1111",
+      "email": "support@dataxways.cloud"
     },
     "sso": [
       {
@@ -131,8 +123,8 @@
   "request_data": {
     "instructions": "To request data access, please contact the admin by email. We will then work with you to provide all the required permissions, if appropriate. Remember to declare which collections do you need access.",
     "contact": {
-      "name": "Alexander Lachmann",
-      "email": "alexander.lachmann@mssm.edu"
+      "name": "Sally Sampleton",
+      "email": "dallysampleton@dataxways.cloud"
     }
   },
   "my_files_page": {
