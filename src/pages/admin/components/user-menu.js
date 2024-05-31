@@ -215,7 +215,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 rel="noreferrer"
               >
                 <Grid container>
-                    <Grid item sx={{ marginRight: "8px" }}>
+                    <Grid item sx={{ marginRight: "8px", fontSize: "12px" }}>
                       <img src={exitIcon} alt="Exit icon" />
                     </Grid>
                     <Grid item>Logout</Grid>
@@ -240,7 +240,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               sx={{ padding: "0 15px", margin: "0 0 10px 0" }}
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                   <img src={profileIcon} alt="profile icon" />
                 </Grid>
                 <Grid item>View Profile</Grid>
@@ -253,7 +253,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               sx={{ padding: "0 15px", margin: "0 0 10px 0" }}
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                   {" "}
                   <img src={conditionsIcon} alt="Terms and conditions icon" />
                 </Grid>
@@ -273,7 +273,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                   sx={{ padding: "0 15px" }}
                 >
                   <Grid container>
-                    <Grid item sx={{ marginRight: "12px" }}>
+                    <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                       {" "}
                       <img src={requestIcon} alt="Request icon" />
                     </Grid>
@@ -289,7 +289,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                   sx={{ padding: "0 15px" }}
                 >
                   <Grid container>
-                    <Grid item sx={{ marginRight: "12px" }}>
+                    <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                       {" "}
                       <img src={requestIcon} alt="Request icon" />
                     </Grid>
@@ -304,7 +304,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               rel="noreferrer"
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                   {" "}
                   <img src={apiIcon} alt="applications icon" />
                 </Grid>
@@ -318,7 +318,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               rel="noreferrer"
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px" , fontSize: "12px"}}>
                   {" "}
                   <img src={helpIcon} alt="help icon" />
                 </Grid>
