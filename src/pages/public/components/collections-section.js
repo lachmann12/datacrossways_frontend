@@ -48,7 +48,8 @@ export const DataCollections = () => {
       >
         <Grid container alignItems="center" justifyContent="center">
           {ids_list.slice(i, i + entriesPerSlide).map((id, j) => (
-            <CollectionCard id={id} key={j} />
+            //<CollectionCard id={id} key={j} />
+            null
           ))}
         </Grid>
       </Paper>
