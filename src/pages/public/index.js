@@ -81,14 +81,19 @@ export const PublicPage = () => {
         />
       </Helmet>
       {hasUserId ? (
-        <AppBar position="fixed" open={open}>
-          <UserMenu sidebarOpen={open} toggleSidebar={toggle} landingPage={true} />
-        </AppBar>
+        //<AppBar position="fixed" open={open}>
+        //  <UserMenu sidebarOpen={open} toggleSidebar={toggle} landingPage={true} />
+        //</AppBar>
+        <div>User is logged in</div> 
       ) : (
         <NavBar />
       )}
       <Jumbotron />
-      <AvailableData />
+      {hasUserId ? (
+        <AvailableData />
+      ) : (
+        null
+      )}
       {hasUserId ? (
         <DataCollections />
       ) : (

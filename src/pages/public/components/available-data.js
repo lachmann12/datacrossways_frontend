@@ -49,7 +49,7 @@ export const AvailableData = () => {
   const { data: stats, isLoading, error } = useQuery("stats", getStats);
 
   if (isLoading) return "Loading...";
-  if (error) return "There was a problem loading this page";
+  if (error) return "There was a problem loading data stats.";
 
   return (
     <Container maxWidth="false" disableGutters={true}>

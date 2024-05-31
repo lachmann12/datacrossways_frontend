@@ -39,7 +39,7 @@ export const NewsSection = () => {
   const { data: news, isLoading, error } = useQuery(["news"], () => getNews());
 
   if (isLoading) return "Loading...";
-  if (error) return "There was a problem loading this page";
+  if (error) return "There was a problem loading news section.";
 
   const MAX_ENTRIES_PER_SLIDE = smallScreens ? 1 : 2;
   const entriesPerSlide =
