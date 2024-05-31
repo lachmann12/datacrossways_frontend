@@ -45,7 +45,7 @@ export const Jumbotron = () => {
       sx={{
         position: "relative",
         backgroundColor: "#FAFAFA",
-        paddingTop: "120px"
+        paddingTop: "60px"
       }}
     >
       <Grid
