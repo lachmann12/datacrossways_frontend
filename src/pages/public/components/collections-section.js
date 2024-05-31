@@ -26,7 +26,7 @@ export const DataCollections = () => {
   const smallScreens = useMediaQuery("(max-width: 1024px)");
 
   const { ids_list, title } = data.startpage.collections_highlight;
-
+  console.log(ids_list);
   const MAX_ENTRIES_PER_SLIDE = smallScreens ? 1 : 3;
 
   const entriesPerSlide =
