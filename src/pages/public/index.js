@@ -77,7 +77,7 @@ export const PublicPage = () => {
         <link rel="icon" type="image/png" href={data.general.project_icon} />
         <meta
           name="description"
-          content="Lymecloud: LymeCommons provides a unified resource to deposit, archive, and share data collected by researchers funded by the Cohen Lyme & Tickborne Disease Initiative."
+          content="dataXways: cloud storage managment system"
         />
       </Helmet>
       {hasUserId ? (
@@ -90,12 +90,14 @@ export const PublicPage = () => {
       )}
       <Jumbotron />
       {hasUserId ? (
-        <AvailableData />
+        //<AvailableData />
+        null
       ) : (
         null
       )}
       {hasUserId ? (
-        <DataCollections />
+        //<DataCollections />
+        null
       ) : (
         null
       )}
