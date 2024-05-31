@@ -26,6 +26,7 @@ export const DataCollections = () => {
   const smallScreens = useMediaQuery("(max-width: 1024px)");
 
   const { ids_list, title } = data.startpage.collections_highlight;
+  console.log(data.startpage.collections_highlight);
   console.log(ids_list);
   const MAX_ENTRIES_PER_SLIDE = smallScreens ? 1 : 3;
 
@@ -48,8 +49,7 @@ export const DataCollections = () => {
       >
         <Grid container alignItems="center" justifyContent="center">
           {ids_list.slice(i, i + entriesPerSlide).map((id, j) => (
-            //<CollectionCard id={id} key={j} />
-            null
+            <CollectionCard id={id} key={j} />
           ))}
         </Grid>
       </Paper>
