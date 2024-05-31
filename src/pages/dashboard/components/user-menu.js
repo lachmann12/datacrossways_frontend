@@ -27,6 +27,7 @@ import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
 import { deepOrange } from '@mui/material/colors';
+import data from "../../../data/config.json";
 
 const style = {
   position: "absolute",
@@ -91,6 +92,19 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
           flexGrow: 1,
         }}
       >
+        {landingPage && (
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Link to="/">
+              <img
+                src={data.general.project_logo}
+                alt="dataXways logo"
+                className="navbarLogo"
+              />
+            </Link>
+          </Typography>
+        )
+        
+        }
         {!landingPage && (
         <Box
           variant="text"
