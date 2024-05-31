@@ -1,7 +1,6 @@
 import { Grid, Box, Typography } from "@mui/material";
 import heroImg1 from "../../../image/hero-img-02.svg";
 import heroImg2 from "../../../image/hero-img-02.png";
-import blobImg from "../../../image/blob-gradient.svg";
 import data from "../../../data/config.json";
 import { styled } from "@mui/system";
 

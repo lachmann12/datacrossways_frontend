@@ -1,7 +1,6 @@
 import { Grid, Box, Link, Typography } from "@mui/material";
 import logo2 from "../image/logo512.png";
 import logo_lab from "../image/logo_ml.png";
-import blobImg from "../image/footer-blob-gradient.svg";
 import data from "../data/config.json";
 import { styled } from "@mui/system";
 
