@@ -95,7 +95,8 @@ export const PublicPage = () => {
         null
       )}
       {hasUserId ? (
-        <DataCollections />
+        //<DataCollections />
+        null
       ) : (
         null
       )}
