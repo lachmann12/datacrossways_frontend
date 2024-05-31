@@ -99,6 +99,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
                 src={data.general.project_logo}
                 alt="dataXways logo"
                 className="navbarLogo"
+                width="200"
               />
             </Link>
           </Typography>
