@@ -90,8 +90,7 @@ export const PublicPage = () => {
       )}
       <Jumbotron />
       {hasUserId ? (
-        //<AvailableData />
-        null
+        <AvailableData />
       ) : (
         null
       )}
