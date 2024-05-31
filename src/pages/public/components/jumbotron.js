@@ -45,6 +45,7 @@ export const Jumbotron = () => {
       sx={{
         position: "relative",
         backgroundColor: "#FAFAFA",
+        paddingTop: "120px"
       }}
     >
       <Grid
@@ -96,7 +97,7 @@ export const Jumbotron = () => {
           }}
         >
           <Box
-            sx={{ maxWidth: "538px", marginTop: "-32px" }}
+            sx={{ maxWidth: "538px", marginTop: "0px" }}
             className="jumbotronText"
           >
             <Typography variant="subtitle2" className="headerTitle">
@@ -105,7 +106,7 @@ export const Jumbotron = () => {
             <Typography
               className="headerSubtitle"
               sx={{
-                fontSize: " 24px",
+                fontSize: " 20px",
                 lineHeight: "32px",
                 letterSpacing: "0px",
                 marginBottom: "20px",
