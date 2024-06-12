@@ -15,6 +15,8 @@ import MuiAppBar from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from 'react-router-dom';
 
+import { ParallaxElement } from "./components/parallax";
+
 const drawerWidth = 344;
 
 const AppBar = styled(MuiAppBar, {
@@ -87,7 +89,9 @@ export const PublicPage = () => {
       ) : (
         <NavBar />
       )}
+      
       <Jumbotron />
+      
       {hasUserId ? (
         <AvailableData />
       ) : (
@@ -100,6 +104,7 @@ export const PublicPage = () => {
       )}
       {/*<NewsSection /> */}
       <ContactInformation />
+      
       <ContactUs />
       <StayConnected />
       <FooterSection />

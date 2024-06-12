@@ -8,6 +8,7 @@ import { UserMenu } from "./components/user-menu";
 import data from "../../data/config.json";
 import { MainHeader } from "./components/main-header";
 import { MainTable } from "./components/main-table";
+import { MainKeyTable } from "./components/apikey/main-table";
 import { FilterContextProvider } from "./filter-context";
 import { Helmet } from "react-helmet-async";
 import { getLoggedUser } from "../../api/user";
@@ -18,6 +19,11 @@ import { FooterSection } from "../../layout/compactfooter";
 
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+
+import {
+  Grid,
+  Typography,
+} from "@mui/material";
 
 const drawerWidth = 344;
 
@@ -102,7 +108,7 @@ export const MyFiles = () => {
         <link rel="icon" type="image/png" href={data.general.project_icon} />
         <meta
           name="description"
-          content="Beginner friendly page for learning React Helmet."
+          content="dataXways"
         />
       </Helmet>
       <FilterContextProvider>
@@ -139,6 +145,25 @@ export const MyFiles = () => {
               <DrawerHeader />
               <MainHeader user={user}/>
               <MainTable
+                sidebarOpen={open}
+                toggleSidebar={toggle}
+                user={user}
+                uploadCompleted={uploadComplete}
+              />
+               <Grid
+                container
+                sx={{ justifyContent: "flex-start", alignItems: "center" }}
+              >
+              <Grid item>
+              <Typography
+                variant="subtitle1"
+                sx={{ textAlign: "left", margin: "24px auto 8px 18px" }}
+              >
+                API Keys
+              </Typography>
+              </Grid>
+              </Grid>
+              <MainKeyTable
                 sidebarOpen={open}
                 toggleSidebar={toggle}
                 user={user}
