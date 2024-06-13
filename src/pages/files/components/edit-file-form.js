@@ -57,6 +57,7 @@ export const EditFileForm = ({
     visibility,
     collection,
     status,
+    checksum
   } = selectedFile;
 
   const createTextFile = async (metadataObject, filename) => {
@@ -128,6 +129,12 @@ export const EditFileForm = ({
             Size:{" "}
           </Typography>
           <Typography>{getReadableFileSizeString(size)}</Typography>
+        </Grid>
+        <Grid container justifyContent="space-between" margin="24px 0">
+          <Typography variant="modalTitle" sx={{ color: "#0F7F90"}}>
+            sha1sum:{" "}
+          </Typography>
+          <Typography sx={{ fontSize: 11, marginTop: "5px"  }}>{checksum}</Typography>
         </Grid>
         <Grid container justifyContent="space-between" margin="24px 0">
           <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>

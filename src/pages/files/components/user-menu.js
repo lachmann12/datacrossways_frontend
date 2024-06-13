@@ -27,6 +27,7 @@ import { EditProfileForm } from "./edit-profile-form";
 import { useQuery } from "react-query";
 import { getLoggedUser } from "../../../api/user";
 import { deepOrange } from '@mui/material/colors';
+import data from "../../../data/config.json";
 
 const style = {
   position: "absolute",
@@ -41,8 +42,8 @@ const style = {
   boxShadow: "0px 0px 6px rgba(0, 43, 52, 0.25)",
 };
 
-export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
-
+export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
+  
   const {
     data: user,
     isLoading,
@@ -72,11 +73,10 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
   const location = useLocation();
   const { pathname } = location;
   const splitLocation = pathname.split("/");
-  
+
   if (isLoading) return "Loading...";
   if (error) return "There was a problem loading this page";
   const roles = user.roles.map((entry) => entry.name);
-
   return (
     <Toolbar
       sx={{
@@ -92,6 +92,21 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
           flexGrow: 1,
         }}
       >
+        {landingPage && (
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Link to="/">
+              <img
+                src={data.general.project_logo}
+                alt="dataXways logo"
+                className="navbarLogo"
+                width="200"
+              />
+            </Link>
+          </Typography>
+        )
+        
+        }
+        {!landingPage && (
         <Box
           variant="text"
           color="inherit"
@@ -127,6 +142,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
             </Button>
           )}
         </Box>
+        )}
         {!sidebarOpen && (
           <Typography component="div" sx={{ marginLeft: "99px" }}>
             <Link to="/">
@@ -168,9 +184,9 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
         </Link>
       )}
       <Button onClick={handleOpen}>
-      <Avatar sx={{ bgcolor: deepOrange[500] }}>
-      {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
-      </Avatar>
+        <Avatar sx={{ bgcolor: deepOrange[500] }}>
+        {`${user.first_name.charAt(0)}${user.last_name.charAt(0)}`.toUpperCase()}
+        </Avatar>
       </Button>
       <Modal
         open={open}
@@ -196,7 +212,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
             <Box sx={{ flexShrink: 0 }}>
               {" "}
               <Typography variant="modalTitle">
-                {user.first_name} {user.last_name}
+              {user.first_name} {user.last_name}
               </Typography>
               <Typography variant="modalSubtitle">{user.email}</Typography>
             </Box>
@@ -214,10 +230,10 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 rel="noreferrer"
               >
                 <Grid container>
-                    <Grid item sx={{ marginRight: "8px" }}>
+                    <Grid item sx={{ marginRight: "4px" }}>
                       <img src={exitIcon} alt="Exit icon" />
                     </Grid>
-                    <Grid item>Logout</Grid>
+                    <Grid item  sx={{ fontSize: 15 }}>Logout</Grid>
                   </Grid>
               </a>
             </Box>
@@ -236,10 +252,10 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               className="modalLinks"
               xs={7}
               onClick={toggleEditModal}
-              sx={{ padding: "0 15px", margin: "0 0 10px 0" }}
+              sx={{ padding: "0 5px", margin: "0 0 7px 0" }}
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "10px" }}>
                   <img src={profileIcon} alt="profile icon" />
                 </Grid>
                 <Grid item>View Profile</Grid>
@@ -269,7 +285,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
                 <Button
                   className="modalLinks"
                   onClick={handleClickOpenDialog}
-                  sx={{ padding: "0 15px" }}
+                  sx={{ padding: "0 5px" }}
                 >
                   <Grid container>
                     <Grid item sx={{ marginRight: "12px" }}>
@@ -317,7 +333,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               rel="noreferrer"
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px", marginLeft: "-10px" }}>
                   {" "}
                   <img src={helpIcon} alt="help icon" />
                 </Grid>
@@ -325,6 +341,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar }) => {
               </Grid>
             </a>
           </Box>
+          
           <EditModal
             isOpen={isEditModalOpen}
             onClose={toggleEditModal}

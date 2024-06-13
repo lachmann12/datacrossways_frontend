@@ -17,6 +17,7 @@ export const ViewDetailFile = ({ id, isOpen, onClose, files }) => {
     visibility,
     collection,
     status,
+    checksum
   } = selectedFile;
 
   const DetailItem = ({ label, value }) => (
@@ -44,6 +45,12 @@ export const ViewDetailFile = ({ id, isOpen, onClose, files }) => {
             label="Size"
             value={getReadableFileSizeString(size) ?? "Missing data"}
           />
+          <Grid container justifyContent="space-between" margin="10px 0">
+            <Typography variant="modalTitle" sx={{ color: "#0F7F90" }}>
+              sha1sum:{" "}
+            </Typography>
+            <Typography sx={{fontSize: 11, marginTop: "5px" }}>{checksum}</Typography>
+          </Grid>
           <DetailItem
             label="Collection"
             value={collection?.name ?? "Missing data"}

@@ -230,10 +230,10 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
                 rel="noreferrer"
               >
                 <Grid container>
-                    <Grid item sx={{ marginRight: "8px" }}>
+                    <Grid item sx={{ marginRight: "4px" }}>
                       <img src={exitIcon} alt="Exit icon" />
                     </Grid>
-                    <Grid item>Logout</Grid>
+                    <Grid item  sx={{ fontSize: 15 }}>Logout</Grid>
                   </Grid>
               </a>
             </Box>
@@ -252,10 +252,10 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
               className="modalLinks"
               xs={7}
               onClick={toggleEditModal}
-              sx={{ padding: "0 15px", margin: "0 0 10px 0" }}
+              sx={{ padding: "0 5px", margin: "0 0 7px 0" }}
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "10px" }}>
                   <img src={profileIcon} alt="profile icon" />
                 </Grid>
                 <Grid item>View Profile</Grid>
@@ -285,7 +285,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
                 <Button
                   className="modalLinks"
                   onClick={handleClickOpenDialog}
-                  sx={{ padding: "0 15px" }}
+                  sx={{ padding: "0 5px" }}
                 >
                   <Grid container>
                     <Grid item sx={{ marginRight: "12px" }}>
@@ -333,7 +333,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
               rel="noreferrer"
             >
               <Grid container>
-                <Grid item sx={{ marginRight: "12px" }}>
+                <Grid item sx={{ marginRight: "12px", marginLeft: "-10px" }}>
                   {" "}
                   <img src={helpIcon} alt="help icon" />
                 </Grid>
@@ -341,6 +341,7 @@ export const UserMenu = ({ sidebarOpen, toggleSidebar, landingPage=false }) => {
               </Grid>
             </a>
           </Box>
+          
           <EditModal
             isOpen={isEditModalOpen}
             onClose={toggleEditModal}
