@@ -2,11 +2,11 @@ import { useReducer, useState } from "react";
 import { Button, Container, Grid, Menu, MenuItem } from "@mui/material";
 import separatorIcon from "../../../../image/separator.svg";
 import moreIcon from "../../../../image/more-icon.svg";
-import buttons from "../../../data/main-buttons-accesskey.json";
+import buttons from "../../../../data/main-buttons-accesskeys.json";
 import { useMutation, useQuery, useQueryClient } from "react-query";
-import { useFilterContext } from "../filter-context";
+import { useFilterContext } from "../../filter-context";
 import { useLocation } from "react-router-dom";
-import { createKey } from "../../../../api/accesskey";
+import { createKey, deleteKey } from "../../../../api/accesskey";
 
 export const MainButtons = ({
   sidebarOpen,
@@ -14,6 +14,7 @@ export const MainButtons = ({
   selectionModel,
   setSelectionModel,
   user,
+  refetchKeys,
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const isMoreMenuOpen = !!anchorEl;
@@ -25,19 +26,13 @@ export const MainButtons = ({
     false
   );
 
-  const { data: allUSerCollections = [] } = useQuery(["allCollections"], () =>
-    getCollections()
-  );
-  const { data: allFiles = [] } = useQuery(["files"], () => searchFiles({}), {
-    refetchOnWindowFocus: false,
-  });
-
   const location = useLocation();
 
   const { filterState } = useFilterContext();
   const activeFilters = Object.keys(filterState).filter(
     (key) => filterState[key] !== undefined
   );
+
   const filteredButtons = buttons.buttons.filter(({ show_for }) => {
     if (show_for === "MULTIPLE" && selectionModel.length > 1) {
       return true;
@@ -77,23 +72,41 @@ export const MainButtons = ({
   const unselectCheckbox = () => {
     setSelectionModel([]);
   };
-  
-  if (isLoading) return "Loading...";
-  if (error) return "There was a problem creating collection";
 
+  const createAccessKey = async () => {
+    try {
+      const response = await createKey(1440);
+      console.log("Key created successfully:", response);
+      refetchKeys();
+    } catch (error) {
+      console.error("Error creating key:", error);
+    }
+  };
+  
+  const handleDelete = () => {
+    for (const accessKeyId of selectionModel) {
+      deleteSelectedKey(accessKeyId);
+    }
+  };
+
+  const deleteSelectedKey = async (id) => {
+    try {
+      const response = await deleteKey(id);
+      console.log("Key deleted successfully:", response);
+      refetchKeys();
+    } catch (error) {
+      console.error("Error creating key:", error);
+    }
+  };
+  
   const handleAction = (actionName) => {
     switch (actionName) {
-      case "refresh":
-        refreshData();
-        break;
       case "delete":
-        setOpenConfirmDeletePolicies(true);
+        handleDelete();
+        console.log("delete selected keys");
         break;
       case "create":
-        handleClickOpenDialog();
-        break;
-      case "filter":
-        toggleSidebar();
+        createAccessKey();
         break;
       case "unselect":
         unselectCheckbox();
@@ -119,11 +132,7 @@ export const MainButtons = ({
                 onClick={() => handleAction(action)}
                 sx={{
                   padding: "0 15px",
-                  display:
-                    (name === "filters" && sidebarOpen) ||
-                    (name === "Download Collection" && !isCollection)
-                      ? "none"
-                      : "inline-flex",
+                  display: "inline-flex",
                 }}
               >
                 <img

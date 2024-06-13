@@ -4,11 +4,8 @@ export const getKey = async (id) => {
   return fetchPublic("/user/accesskey");
 };
 
-export const createKey = async (data) => {
-  const response = await fetchPublic("/user/accesskey/${expiration}", {
-    method: "POST",
-    body: JSON.stringify(data),
-  });
+export const createKey = async (expiration) => {
+  const response = await fetchPublic(`/user/accesskey/${expiration}`, {method: "POST"});
   return response;
 };
 

@@ -22,7 +22,7 @@ import nextIcon from "../../../../image/next-icon.svg";
 import prevDisabledIcon from "../../../../image/disabled-prev-icon.svg";
 import "./custom-keys-data-grid.css";
 import { useState } from "react";
-import { format, parse } from "date-fns";
+import { format, parse, addHours, isAfter } from "date-fns";
 import config from "../../../../data/config.json";
 
 const MISSING_DATA_TEXT = "Missing data";
@@ -32,7 +32,7 @@ const columns = [
     field: "uuid",
     headerName: "Key",
     editable: false,
-    flex: 0.6,
+    flex: 0.8,
     valueGetter: (params) => params?.row?.uuid ?? MISSING_DATA_TEXT,
   },
   {
@@ -40,7 +40,7 @@ const columns = [
     headerName: "Creation Date",
     editable: false,
     sortable: false,
-    flex: 0.8,
+    flex: 0.3,
     valueFormatter: (params) => {
       if (params.value === null) {
         return "";
@@ -53,6 +53,59 @@ const columns = [
       } catch {
         return "Invalid Date";
       }
+    },
+  },
+  {
+    field: "expiration_date",
+    headerName: "Expiration Date",
+    editable: false,
+    sortable: false,
+    flex: 0.3,
+    valueGetter: (params) => {
+      const creationDateStr = params?.row?.creation_date;
+      const expirationTime = params?.row?.expiration_time;
+      
+      if (creationDateStr && typeof expirationTime === 'number') {
+        try {
+          const creationDate = parse(creationDateStr, "EEE, dd MMM yyyy HH:mm:ss 'GMT'", new Date());
+          const expirationDateObj = addHours(creationDate, expirationTime);
+          return format(expirationDateObj, config.date_format);
+        } catch {
+          return "Invalid Date";
+        }
+      }
+      
+      return MISSING_DATA_TEXT;
+    },
+  },
+  {
+    field: "status_icon",
+    headerName: "Active",
+    editable: false,
+    sortable: false,
+    flex: 0.2,
+    valueGetter: (params) => {
+      const creationDateStr = params?.row?.creation_date;
+      const expirationTime = params?.row?.expiration_time;
+      
+      if (creationDateStr && typeof expirationTime === 'number') {
+        try {
+          const creationDate = parse(creationDateStr, "EEE, dd MMM yyyy HH:mm:ss 'GMT'", new Date());
+          const expirationDate = addHours(creationDate, expirationTime);
+          const currentDate = new Date();
+          
+          // Check if expiration date is after the current date
+          if (isAfter(expirationDate, currentDate)) {
+            return "✔️";
+          } else {
+            return "❌";
+          }
+        } catch {
+          return "❌";
+        }
+      }
+      
+      return MISSING_DATA_TEXT;
     },
   },
 ];

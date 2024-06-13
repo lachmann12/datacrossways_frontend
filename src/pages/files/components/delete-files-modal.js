@@ -146,7 +146,7 @@ export const DeleteFilesModal = ({
           >
             <img
               src={confirmIcon}
-              alt="Resquest role icone"
+              alt="Resquest role icon"
               style={{ margin: "0 8px 0 0" }}
             />
             Yes, confirm

@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import { useFilterContext } from "../../filter-context";
 import { CustomKeysDataGrid } from "./custom-keys-data-grid";
 import { getKey, createKey, deleteKey } from "../../../../api/accesskey";
+import { MainButtons } from "./main-buttons";
 
 export const MainKeyTable = ({ sidebarOpen, toggleSidebar, user }) => {
   const [selectionModel, setSelectionModel] = useState([]);
@@ -14,6 +15,7 @@ export const MainKeyTable = ({ sidebarOpen, toggleSidebar, user }) => {
     data: keys,
     isLoading,
     error,
+    refetch,
   } = useQuery(["keys"], () => getKey());
 
   useEffect(() => {
@@ -27,6 +29,14 @@ export const MainKeyTable = ({ sidebarOpen, toggleSidebar, user }) => {
 
   return (
     <>
+      <MainButtons
+        sidebarOpen={sidebarOpen}
+        toggleSidebar={toggleSidebar}
+        selectionModel={selectionModel}
+        setSelectionModel={setSelectionModel}
+        user={user}
+        refetchKeys={refetch} 
+      />
       <Container>
         <Box sx={{ width: "100%" }}>
           <CustomKeysDataGrid
